@@ -53,7 +53,7 @@
 		<canvas id="mycanvas" width="640" height="480" ></canvas>
 		</div>
 
-		<div  class ="flagged" id="dummy" style="height:1200px;background-color:#000;"></div>
+		<div  class ="flagged" id="dummy" style="height:1200px;background-color:#fff;"> <div class="txt-container"><h4 style="font-size: 2em;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui arcu, tristique vel aliquet lobortis, congue nec nisi. Nulla semper, arcu a volutpat lobortis, justo dui aliquet orci, at iaculis enim arcu eget dui.<br> Donec id nisl nunc. In et velit ante. Mauris scelerisque justo sit amet nulla posuere, sit amet elementum arcu fringilla.</h4></div> </div>
 
 		
 	
@@ -94,6 +94,14 @@ var waypoint1 = new Waypoint({
   handler: function(direction) {
    
     $('anim').addClass("animated moveDown");
+  },offset: '50%'
+});
+
+var waypoint2 = new Waypoint({
+  element: document.getElementById('dummy'),
+  handler: function(direction) {
+   
+    $('floating-txt').addClass("animated colorChange");
   },offset: '50%'
 });
 
