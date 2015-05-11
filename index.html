@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="css/vendors/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css" >
-	
+	<script src="js/vendor/jquery-1.9.1.min.js"></script>
 	
 	
 </head>
@@ -42,17 +42,18 @@
 			</div>
 		</nav>
 
-	<div class="hero-anim"></div>
+	<div class="hero-anim" id="anim2"></div>
 	
 		
 		<div id="d_loading"></div>
-		<div id="floating-logo"><div id="floating-txt"><h3> Explore. Dream. Wonder.<br> Indulge your soul in wanderlust.</h3></div></div>
+
+		<div class="floating-logo" id="anim" ><div id="floating-txt"><h3 > Explore. Dream. Wonder.<br> Indulge your soul in wanderlust.</h3></div></div>
 
 		
-		<canvas id="mycanvas" width="640" height="480" style="height:100%;"></canvas>
+		<canvas id="mycanvas" width="640" height="480" ></canvas>
 		</div>
 
-		<div class="dummy" style="height:1000px"></div>
+		<div  class ="flagged" id="dummy" style="height:1200px;background-color:#000;"></div>
 
 		
 	
@@ -80,8 +81,27 @@
 			</form>
 		</center></div>
 	  <![endif]-->
+<script type="text/javascript" src="js/noframework.waypoints.min.js"></script>
 
 
+
+
+<script type="text/javascript">
+
+
+var waypoint1 = new Waypoint({
+  element: document.getElementById('dummy'),
+  handler: function(direction) {
+   
+    $('anim').addClass("animated moveDown");
+  },offset: '50%'
+});
+
+
+
+	</script>
+
+<script src="js/init.js"></script>
 	  <script type="text/javascript" src="hero/oop.js"></script>
 	<script type="text/javascript" src="hero/tools.js"></script>
 	<script type="text/javascript" src="hero/cookie.js"></script>
@@ -91,6 +111,40 @@
 	<script type="text/javascript" src="hero/tween.js"></script>
 	<script type="text/javascript" src="hero/framecount.js"></script>
 	<script type="text/javascript" src="hero/main.js"></script>
+	
+
+
+	<!--<script type="text/javascript">
+	jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.size() == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+        $animatables.each(function(i) {
+       var $animatable = $(this);
+            if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+            }
+    });
+
+    };
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+    $(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+}); </script>-->
+
 		
 	<script language="JavaScript">
 		if (document.addEventListener) {
@@ -124,6 +178,7 @@
 			// CFInstall.check({ mode: "overlay" });
 		}
 	</script>
+	
 	
 	
 </body>
