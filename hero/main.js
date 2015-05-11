@@ -44,7 +44,7 @@ var CanvasCycle = {
 		// called when DOM is ready
 		if (!this.inited) {
 			this.inited = true;
-			$('container').style.display = 'block';
+			
 			
 		
 			FrameCount.init();
@@ -262,52 +262,7 @@ var CanvasCycle = {
 
 	scaleAnimate: function() {
 		// handle scaling image up or down
-		if (this.settings.zoomFull) {
-			// scale up to full size
-			var totalNativeWidth = this.contentSize.width + this.contentSize.optionsWidth;
-			var maxScaleX = ((this.winSize.width - 30) / totalNativeWidth); // +1 for making it bigger
-			
 		
-			var totalNativeHeight = this.contentSize.height;
-
-			var maxScaleY = ((this.winSize.height - 30) / totalNativeHeight);
-		
-			var maxScale = Math.min( maxScaleX, maxScaleY );
-		
-			if (this.contentSize.scale != maxScale) {
-				this.contentSize.scale += ((maxScale - this.contentSize.scale) / 8);
-				if (Math.abs(this.contentSize.scale - maxScale) < 0.001) this.contentSize.scale = maxScale; // close enough
-			
-				var sty = $('mycanvas').style; 
-			
-				if (ua.webkit) sty.webkitTransform = 'translate3d(0px, 0px, 0px) scale('+this.contentSize.scale+')';
-				else if (ua.ff) sty.MozTransform = 'scale('+this.contentSize.scale+')';
-				else if (ua.op) sty.OTransform = 'scale('+this.contentSize.scale+')';
-				else sty.transform = 'scale('+this.contentSize.scale+')';
-				
-				sty.marginRight = '' + 0+ 'px';
-				sty.marginTop=''+0+'px';
-								this.repositionContainer();
-			}
-		}
-		else {
-			// scale back down to native
-			if (this.contentSize.scale > 1.0) {
-				this.contentSize.scale += ((1.0 - this.contentSize.scale) / 8);
-				if (this.contentSize.scale < 1.001) this.contentSize.scale = 1.0; // close enough
-			
-				var sty = $('mycanvas').style; 
-			
-				if (ua.webkit) sty.webkitTransform = 'translate3d(0px, 0px, 0px) scale('+this.contentSize.scale+')';
-				else if (ua.ff) sty.MozTransform = 'scale('+this.contentSize.scale+')';
-				else if (ua.op) sty.OTransform = 'scale('+this.contentSize.scale+')';
-				else sty.transform = 'scale('+this.contentSize.scale+')';
-				
-				sty.marginRight = '' + Math.floor( (this.contentSize.width * this.contentSize.scale) - this.contentSize.width ) + 'px';
-				
-				this.repositionContainer();
-			}
-		}
 	},
 	
 	repositionContainer: function() {
@@ -315,8 +270,9 @@ var CanvasCycle = {
 		var div = $('container');
 		if (div) {
 			this.winSize = getInnerWindowSize();
-			div.style.left = '' + Math.floor((this.winSize.width / 2) - (((this.contentSize.width * this.contentSize.scale) + this.contentSize.optionsWidth) / 2)) + 'px';
-			div.style.top = '' + Math.floor((this.winSize.height / 2) - ((this.contentSize.height * this.contentSize.scale) / 2)) + 'px';	
+			div.style.left = '' + 0 + 'px';
+
+			div.style.top = '' + 0+ 'px';	
 			
 		}
 	},
