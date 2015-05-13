@@ -50,7 +50,7 @@
 		
 		<div id="d_loading"></div>
 
-		<div class="floating-logo" id="anim" ><div id="floating-txt"><h3 > Explore. Dream. Wonder.<br> Indulge your soul in wanderlust.</h3></div></div>
+		<div class="floating-logo" id="anim" ><div id="floating-txt" ><h3 > Explore. Dream. Wonder.<br> Indulge your soul in wanderlust.</h3></div></div>
 
 		
 		<canvas id="mycanvas" width="640" height="480" ></canvas>
@@ -87,7 +87,7 @@
 		</center></div>
 	  <![endif]-->
 
-<script type="text/javascript" src="js/noframework.waypoints.min.js"></script>
+
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 
 <script type="text/javascript">
@@ -142,7 +142,18 @@
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
+        onLeave: function(index, nextIndex, direction){
+        	console.log(index);
+        	
+
+        	$('#anim').toggleClass('animated', (index == 1 && direction == 'down' ) || (index == 2 && direction == 'up'));
+
+					$('#anim').toggleClass('moveDown', nextIndex == 2);
+					$('#anim').toggleClass('moveUp', index == 1 && direction == 'up');
+					
+					$('#floating-txt').toggleClass('colorChange', nextIndex == 2);
+					
+        },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
         afterResize: function(){},
@@ -154,7 +165,7 @@
 </script>
 
 
-
+<!--
 <script type="text/javascript">
 
 var waypoint1 = new Waypoint({
@@ -175,7 +186,7 @@ var waypoint2 = new Waypoint({
 
 
 
-	</script>
+	</script>-->
 
 <script src="js/init.js"></script>
 	  <script type="text/javascript" src="hero/oop.js"></script>
