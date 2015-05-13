@@ -284,3 +284,13 @@ h3{
 
 }
 
+.fp-tooltip{
+		color: #AAA;
+	}
+	#fp-nav span, .fp-slidesNav span{
+		border-color: #AAA;
+	}
+	#fp-nav li .active span, .fp-slidesNav .active span{
+		background:#FFCD00;
+	}
+
