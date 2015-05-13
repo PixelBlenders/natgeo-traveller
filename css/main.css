@@ -165,6 +165,7 @@ h3{
 	-webkit-filter: contrast(120%);
 	-moz-filter: contrast(120%);
 	-o-filter: contrast(120%);
+	filter: contrast(120%);
 
 	
 	/* -webkit-transform: translate3d(0px, 0px, 0px) scale(1);

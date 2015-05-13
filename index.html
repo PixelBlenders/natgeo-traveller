@@ -60,6 +60,10 @@
 		<div  class ="flagged" id="dummy" style="background-color:#fff;"> <div class="txt-container"><h4 style="font-size: 2em;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui arcu, tristique vel aliquet lobortis, congue nec nisi. Nulla semper, arcu a volutpat lobortis, justo dui aliquet orci, at iaculis enim arcu eget dui.<br> Donec id nisl nunc. In et velit ante. Mauris scelerisque justo sit amet nulla posuere, sit amet elementum arcu fringilla.</h4></div> </div>
 	</div>
 
+	<div class="section">
+		<div   style="background-color:#fff;">
+	</div>
+
 		
 	
 	
@@ -97,10 +101,10 @@
     $('#fullpage').fullpage({
         //Navigation
         menu: false,
-        anchors:['firstPage', 'secondPage'],
+        anchors:['firstPage', 'secondPage','thirdPage'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Home', 'bout us'],
+        navigationTooltips: ['Home', 'bout us','stuffz'],
         showActiveTooltips: true,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -146,9 +150,9 @@
         	console.log(index);
         	
 
-        	$('#anim').toggleClass('animated', (index == 1 && direction == 'down' ) || (index == 2 && direction == 'up'));
+        	$('#anim').toggleClass('animated', (index == 1 && direction == 'down' ) || (index == 2 && direction == 'up')|| (nextIndex == 3 && direction == 'down')|| (nextIndex == 2 && direction == 'up'));
 
-					$('#anim').toggleClass('moveDown', nextIndex == 2);
+					$('#anim').toggleClass('moveDown', nextIndex == 2||nextIndex == 3);
 					$('#anim').toggleClass('moveUp', index == 1 && direction == 'up');
 					
 					$('#floating-txt').toggleClass('colorChange', nextIndex == 2);
