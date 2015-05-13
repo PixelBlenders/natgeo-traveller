@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar" role="navigation">
-			<div class="container">
+			<div class="navbar-inner">
 				
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -57,7 +57,7 @@
 	</div>
 
 	<div class="section">
-		<div  class ="flagged" id="dummy" style="height:1200px;background-color:#fff;"> <div class="txt-container"><h4 style="font-size: 2em;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui arcu, tristique vel aliquet lobortis, congue nec nisi. Nulla semper, arcu a volutpat lobortis, justo dui aliquet orci, at iaculis enim arcu eget dui.<br> Donec id nisl nunc. In et velit ante. Mauris scelerisque justo sit amet nulla posuere, sit amet elementum arcu fringilla.</h4></div> </div>
+		<div  class ="flagged" id="dummy" style="background-color:#fff;"> <div class="txt-container"><h4 style="font-size: 2em;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui arcu, tristique vel aliquet lobortis, congue nec nisi. Nulla semper, arcu a volutpat lobortis, justo dui aliquet orci, at iaculis enim arcu eget dui.<br> Donec id nisl nunc. In et velit ante. Mauris scelerisque justo sit amet nulla posuere, sit amet elementum arcu fringilla.</h4></div> </div>
 	</div>
 
 		
@@ -152,6 +152,7 @@
 					$('#anim').toggleClass('moveUp', index == 1 && direction == 'up');
 					
 					$('#floating-txt').toggleClass('colorChange', nextIndex == 2);
+					$('.navbar').toggleClass('nav-big', nextIndex != 1);
 					
         },
         afterLoad: function(anchorLink, index){},
@@ -165,28 +166,6 @@
 </script>
 
 
-<!--
-<script type="text/javascript">
-
-var waypoint1 = new Waypoint({
-  element: document.getElementById('dummy'),
-  handler: function(direction) {
-   
-    $('anim').addClass("animated moveDown");
-  },offset: '50%'
-});
-
-var waypoint2 = new Waypoint({
-  element: document.getElementById('dummy'),
-  handler: function(direction) {
-   
-    $('floating-txt').addClass("animated colorChange");
-  },offset: '50%'
-});
-
-
-
-	</script>-->
 
 <script src="js/init.js"></script>
 	  <script type="text/javascript" src="hero/oop.js"></script>
@@ -198,7 +177,7 @@ var waypoint2 = new Waypoint({
 	<script type="text/javascript" src="hero/tween.js"></script>
 	<script type="text/javascript" src="hero/framecount.js"></script>
 	<script type="text/javascript" src="hero/main.js"></script>
-	
+
 
 
 
