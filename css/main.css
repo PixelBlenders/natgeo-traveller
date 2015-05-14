@@ -719,7 +719,7 @@ nav.box {
 	.ngtsearch {
 	width: 200px;
 	min-height: 40px;
-	background-color: transparent;
+	background-color: rgba(241,241,241,0.6);
 	position: fixed;
 	z-index: 10000;
 	top: 1%;
@@ -805,7 +805,7 @@ nav.box {
 }
 
 .ngtsearch.hideInput .ngtsearch-input {
-	border-width:0px;
+	
 	color: transparent;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
@@ -895,8 +895,10 @@ input[type="search"] { /* reset normalize */
 	cursor: pointer;
 	pointer-events: none;
 	opacity: 0;
+
 	-webkit-transform: scale3d(0,0,1);
 	transform: scale3d(0,0,1);
+
 }
 
 .ngtsearch.open .ngtsearch-close {
