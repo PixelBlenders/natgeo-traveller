@@ -45,6 +45,7 @@ h3{
 }
 .nav-big{  height: 80px;
 	padding-top: 25px;
+	padding-right: 150px;
 	font-size: 1.2em;
 	 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -490,7 +491,9 @@ article {
 	margin-top: 50px;
 }
 
-#wrapper {padding-left: 8%;
+#wrapper {
+	margin-top: 50px;
+	padding-left: 8%;
 	margin: 0 auto 0 auto; }
 
 #skip_to {
@@ -510,7 +513,7 @@ article {
 .wrap {
 	background: #F4F4F5;
 	border: 0px solid #456;
-	margin: 24px 0 0 0;
+	margin: 50px 0 0 0;
 
 	clear: both; }
 
@@ -708,6 +711,392 @@ nav.box {
 
 #we-like article.filter1, #we-like article.filter2, #we-like article.filter3 {
 	display: none; }
+
+
+
+
+	/*Search */
+	.ngtsearch {
+	width: 200px;
+	min-height: 40px;
+	background-color: transparent;
+	position: fixed;
+	z-index: 10000;
+	top: 1%;
+	right: 1%;
+	border-width:1px;	
+    border-style:solid;
+    border-color: #FFCD00;
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+	-webkit-transition-property: min-height, width, top, right;
+	transition-property: min-height, width, top, right;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+}
+.ngtsearch-big{
+	width: 250px;
+	top: 2%;
+	border-width:2px;	
+	background-color: transparent;
+
+}
+
+.ngtsearch.open {
+	border-width:0px;
+	background: #f1f1f1;
+	width: 100%;
+	min-height: 100%;
+	top: 0px;
+	right: 0px;
+}
+
+.ngtsearch-form {
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	position: relative;
+
+	-webkit-transition-property: width, height, -webkit-transform;
+	transition-property: width, height, transform;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.ngtsearch.open .ngtsearch-form {
+	width: 80%;
+	height: 160px;
+	background-color: rgba(255,255,255,0.3);
+	-webkit-transform: translate3d(0,3em,0);
+	transform: translate3d(0,3em,0);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.ngtsearch.open .ngtsearch-form:hover,
+.ngtsearch.open .ngtsearch-form:focus,
+.ngtsearch.open .ngtsearch-form:active
+ {background-color: rgba(255,255,255,0.5);
+ }
+
+.ngtsearch-input {
+	width: 100%;
+	height: 100%;
+	padding: 0 10% 0 10px;
+	font-weight: 700;
+	border: none;
+	background: transparent;
+	font-size: 0.8em;
+	color: #FFCD00;
+
+	-webkit-transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
+	transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
+
+}
+
+.ngtsearch-input::-ms-clear { /* remove cross in IE */
+	border-width:0px;
+    display: none;
+}
+
+.ngtsearch.hideInput .ngtsearch-input {
+	border-width:0px;
+	color: transparent;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.ngtsearch.open .ngtsearch-input {
+	border-width:2px;	
+    border-style:solid;
+    border-color: #FFCD00;
+	font-size: 7em;
+
+}
+
+/* placeholder */
+.ngtsearch-input::-webkit-input-placeholder {
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.ngtsearch-input:-moz-placeholder {
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.ngtsearch-input::-moz-placeholder {
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.ngtsearch-input:-ms-input-placeholder {
+	font-size: 1.2em;
+	color: #fff;
+}
+
+/* hide placeholder when active in Chrome */
+.gn-search:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input[type="search"] { /* reset normalize */
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;	
+}
+
+.ngtsearch-input:focus,
+.ngtsearch-submit:focus {
+	outline: none;
+}
+
+.ngtsearch-submit {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	text-indent: 100px;
+	overflow: hidden;
+	right: 0;
+	top: 50%;
+	background: transparent url(../images/magnifier.svg) no-repeat center center;
+	background-size: 100%;
+	border: none;
+	pointer-events: none;
+	transform-origin: 50% 50%;
+	opacity: 0;
+	-webkit-transform: translate3d(-30px,-50%,0) scale3d(0,0,1);
+	transform: translate3d(-30px,-50%,0) scale3d(0,0,1);
+}
+
+.ngtsearch.open .ngtsearch-submit {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transform: translate3d(-30px,-50%,0) scale3d(1,1,1);
+	transform: translate3d(-30px,-50%,0) scale3d(1,1,1);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.ngtsearch-close {
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	overflow: hidden;
+	text-indent: 100%;
+	cursor: pointer;
+	pointer-events: none;
+	opacity: 0;
+	-webkit-transform: scale3d(0,0,1);
+	transform: scale3d(0,0,1);
+}
+
+.ngtsearch.open .ngtsearch-close {
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.ngtsearch-close::before,
+.ngtsearch-close::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	border-radius: 3px;
+	opacity: 0.2;
+	background: #000;
+}
+
+.ngtsearch-close:hover.ngtsearch-close::before,
+.ngtsearch-close:hover.ngtsearch-close::after {
+	opacity: 1;
+}
+
+.ngtsearch-close::before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.ngtsearch-close::after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.ngtsearch-content {
+	color: #333;
+	margin-top: 4.5em;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding: 0 10.5%;
+	background: #f1f1f1;
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.ngtsearch.open .ngtsearch-content {
+	opacity: 1;
+	height: auto;
+	overflow: visible; 
+	pointer-events: auto;
+	-webkit-transition: opacity 0.3s 0.5s;
+	transition: opacity 0.3s 0.5s;
+}
+
+.dummy-column {
+	width: 30%;
+	padding: 0 0 6em;
+	float: left;
+	opacity: 0;
+	-webkit-transform: translate3d(0,100px,0);
+	transform: translateY(100px);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.ngtsearch.open .dummy-column:first-child {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+.ngtsearch.open .dummy-column:nth-child(2) {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+}
+
+.ngtsearch.open .dummy-column:nth-child(3) {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.ngtsearch.open .dummy-column {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.dummy-column:nth-child(2) {
+	margin: 0 5%;
+}
+
+.dummy-column h2 {
+	font-size: 1.5em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #c2c2c2;
+	padding: 0.5em 0;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+.dummy-media-object {
+	padding: 0.75em;
+	display: block;
+	margin: 0.3em 0;
+	cursor: pointer;
+	border-radius: 5px;
+	background: rgba(255,255,255,0.5);
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.dummy-media-object:hover,
+.dummy-media-object:focus {
+	background: rgba(255,255,255,0.9);
+}
+
+.dummy-media-object img {
+	display: inline-block;
+	width: 50px;	
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+}
+
+.dummy-media-object h3 {
+	vertical-align: middle;
+	font-size: 1.5em;
+	display: inline-block;
+	font-weight: 700;
+	margin: 0 0 0 0;
+	width: calc(100% - 70px);
+	color: rgba(145,145,145,0.7);
+	
+}
+
+.dummy-media-object:hover h3 {
+	color: #FFCD00;
+}
+
+/* Overlay */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.ngtsearch.open ~ .overlay {
+	opacity: 1;
+}
+
+@media screen and (max-width: 53.125em) {
+	.ngtsearch-input {
+		padding: 0 25% 0 10px;
+	}
+	.ngtsearch.open .ngtsearch-input {
+		font-size: 2em;
+	}
+	.dummy-column {
+		float: none;
+		width: auto;
+		padding: 0 0 2em;
+	}
+	.dummy-column:nth-child(2) {
+		margin: 0;
+	}
+	.ngtsearch.open .ngtsearch-submit {
+		-webkit-transform: translate3d(0,-50%,0) scale3d(0.5,0.5,1);
+		transform: translate3d(0,-50%,0) scale3d(0.5,0.5,1);
+	}
+}
+
+@media screen and (max-width: 60.625em) {
+	.ngtsearch {
+		width: 80%;
+		top: 10%;
+		right: 10%;
+	}
+}
 
 
 
