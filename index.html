@@ -44,6 +44,93 @@
 				</div>
 			</div>
 		</nav>
+<div id="ngtsearch" class="ngtsearch">
+				<form class="ngtsearch-form">
+					<input class="ngtsearch-input" type="search" placeholder="Search..."/>
+					<button class="ngtsearch-submit" type="submit">Search</button>
+				</form>
+				<div class="ngtsearch-content">
+					<div class="dummy-column">
+						<h2>Writers</h2>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="images/dude.png" alt="Jane Doe"/>
+							<h3>Jane Doe</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="images/dude.png" alt="Jane Doe"/>
+							<h3>Bharath KKB</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="images/dude.png" alt="Jane Doe"/>
+							<h3>Savio</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="images/dude.png" alt="Jane Doe"/>
+							<h3>Kappa</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="images/dude.png" alt="Jane Doe"/>
+							<h3>Jane Doe</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="images/dude.png" alt="Jane Doe"/>
+							<h3>Jane Doe</h3>
+						</a>
+					</div>
+					<div class="dummy-column">
+						<h2>Popular</h2>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image1.jpg" alt="image-thumb"/>
+							<h3>Tiger is awesome.</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image2.jpg" alt="image-thumb"/>
+							<h3>Travel is luv</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image3.jpg" alt="image-thumb"/>
+							<h3>But travel is life</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image4.jpg" alt="image-thumb"/>
+							<h3>Staph and enjoy nature</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image5.jpg" alt="image-thumb"/>
+							<h3>Do you even nature brah?</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image6.jpg" alt="image-thumb"/>
+							<h3>For the lulz, so.</h3>
+						</a>
+					</div>
+					<div class="dummy-column">
+						<h2>Recent</h2>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image6.jpg" alt="image-thumb"/>
+							<h3>For the lulz, so.</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image5.jpg" alt="image-thumb"/>
+							<h3>Do you even nature brah?</h3>
+						</a>
+					<a class="dummy-media-object" href="#">
+							<img src="images/image3.jpg" alt="image-thumb"/>
+							<h3>But travel is life</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="images/image1.jpg" alt="image-thumb"/>
+							<h3>Tiger is awesome.</h3>
+						</a>
+						
+					</div>
+				</div><!-- /ngtsearch-content -->
+				<span class="ngtsearch-close"></span>
+			</div>
+
+
+
+
 
 <div id="fullpage">
 	<div class="section">
@@ -252,7 +339,7 @@ Well hurt one eagle lantern egotistic as ape yikes some this yikes because jeez.
         //Accessibility
         keyboardScrolling: true,
         animateAnchor: true,
-        recordHistory: true,
+        recordHistory: false,
 
         //Design
         controlArrows: true,
@@ -280,6 +367,7 @@ Well hurt one eagle lantern egotistic as ape yikes some this yikes because jeez.
 					
 					$('#floating-txt').toggleClass('colorChange', nextIndex == 2);
 					$('.navbar').toggleClass('nav-big', nextIndex != 1);
+					$('.ngtsearch').toggleClass('ngtsearch-big', nextIndex != 1);
 					
         },
         afterLoad: function(anchorLink, index){},
@@ -382,8 +470,59 @@ jQuery(function ($) {
 
 
 </script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script>
+			(function() {
+				var ngtsearch = document.getElementById( 'ngtsearch' ),
+					input = ngtsearch.querySelector( 'input.ngtsearch-input' ),
+					ctrlClose = ngtsearch.querySelector( 'span.ngtsearch-close' ),
+					isOpen = isAnimating = false,
+					// show/hide search area
+					toggleSearch = function(evt) {
+						// return if open and the input gets focused
+						if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+
+						var offsets = ngtsearch.getBoundingClientRect();
+						if( isOpen ) {
+							classie.remove( ngtsearch, 'open' );
+
+							// trick to hide input text once the search overlay closes 
+							// todo: hardcoded times, should be done after transition ends
+							if( input.value !== '' ) {
+								setTimeout(function() {
+									classie.add( ngtsearch, 'hideInput' );
+									setTimeout(function() {
+										classie.remove( ngtsearch, 'hideInput' );
+										input.value = '';
+									}, 300 );
+								}, 500);
+							}
+							
+							input.blur();
+						}
+						else {
+							classie.add( ngtsearch, 'open' );
+						}
+						isOpen = !isOpen;
+					};
+
+				// events
+				input.addEventListener( 'focus', toggleSearch );
+				ctrlClose.addEventListener( 'click', toggleSearch );
+				// esc key closes search overlay
+				// keyboard navigation events
+				document.addEventListener( 'keydown', function( ev ) {
+					var keyCode = ev.keyCode || ev.which;
+					if( keyCode === 27 && isOpen ) {
+						toggleSearch(ev);
+					}
+				} );
 
 
+				/***** for demo purposes only: don't allow to submit the form *****/
+				ngtsearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+			})();
+		</script>
 
 <script src="js/init.js"></script>
 	  <script type="text/javascript" src="hero/oop.js"></script>
@@ -434,7 +573,7 @@ jQuery(function ($) {
 	</script>
 
 	
-	<script type="text/javascript" src="js/onload.js"></script>
+
 	
 </body>
 </html>
