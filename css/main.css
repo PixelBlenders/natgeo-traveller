@@ -719,7 +719,7 @@ nav.box {
 	.ngtsearch {
 	width: 200px;
 	min-height: 40px;
-	background-color: rgba(241,241,241,0.6);
+	background: transparent;
 	position: fixed;
 	z-index: 10000;
 	top: 1%;
@@ -727,6 +727,8 @@ nav.box {
 	border-width:1px;	
     border-style:solid;
     border-color: #FFCD00;
+-webkit-transition: background ease-in 0.3s;
+	transition:background ease-in 0.3s;
 	-webkit-transform-origin: 100% 0;
 	transform-origin: 100% 0;
 	-webkit-transition-property: min-height, width, top, right;
@@ -735,13 +737,15 @@ nav.box {
 	transition-duration: 0.5s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	
 
 }
 .ngtsearch-big{
+	background:rgb(241,241,241);
 	width: 250px;
 	top: 2%;
 	border-width:2px;	
-	background-color: transparent;
+	
 
 }
 
@@ -774,9 +778,7 @@ nav.box {
 	background-color: rgba(255,255,255,0.3);
 	-webkit-transform: translate3d(0,3em,0);
 	transform: translate3d(0,3em,0);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	transition: all 0.2s;
+	
 }
 .ngtsearch.open .ngtsearch-form:hover,
 .ngtsearch.open .ngtsearch-form:focus,
@@ -800,7 +802,7 @@ nav.box {
 }
 
 .ngtsearch-input::-ms-clear { /* remove cross in IE */
-	border-width:0px;
+	
     display: none;
 }
 
