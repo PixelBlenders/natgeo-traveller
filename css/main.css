@@ -473,10 +473,15 @@ a.zoom:hover {
 	z-index: 100;
 }
 .entry-content {
-	padding: 5px 30px 15px 30px;border-width:5px;	
-    border-style:solid;
-    border-color: #FFCD00;
+
+	
+	
+		padding: 5px 30px 15px 30px;
+		
+
+	
 }
+
 
 article {
 
@@ -511,30 +516,40 @@ article {
     line-height: 0; }
 
 .wrap {
-	background: #F4F4F5;
-	border: 0px solid #456;
-	margin: 50px 0 0 0;
+	padding-top: 50px;
 
 	clear: both; }
 
 	.box {
 	margin: 0 0 0 0;
-	padding-bottom: 24px;
+	overflow: hidden;
 	float: left;
-	background: #fff url(../images/curl.jpg) no-repeat bottom;
+	background: #fff ;
+	margin-bottom: 20px;
+	border-width:5px;	
+    border-style:solid;
+    border-color: transparent;
+    -webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		-o-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
 		}
+		.box:hover,
+.box:active,
+.box:focus
+{border-width:5px;	
+    border-style:solid;
+    border-color: #FFCD00;}
 		
 
 
-div.video {
+div.video {z-index: -99;
 
 	width: 380px;
 	overflow: hidden; 
-	border-width:5px;	
-    border-style:solid;
-    border-color: #FFCD00;
-    margin-bottom: 10px;
+	
 }
+
 	
 div.video iframe {
 
@@ -549,6 +564,7 @@ nav {
 	display: block;}
 	
 nav.box {
+
 	background: none;
 }
 
@@ -599,9 +615,7 @@ nav.box {
 
 		/* root element for single scroll */
 		.scroll {
-			border-width:5px;	
-    border-style:solid;
-    border-color: #FFCD00;
+			
 
 			position:relative;
 			overflow:hidden;
@@ -719,7 +733,7 @@ nav.box {
 	.ngtsearch {
 	width: 200px;
 	min-height: 40px;
-	background-color: rgba(241,241,241,0.6);
+	background: transparent;
 	position: fixed;
 	z-index: 10000;
 	top: 1%;
@@ -727,6 +741,7 @@ nav.box {
 	border-width:1px;	
     border-style:solid;
     border-color: #FFCD00;
+
 	-webkit-transform-origin: 100% 0;
 	transform-origin: 100% 0;
 	-webkit-transition-property: min-height, width, top, right;
@@ -735,13 +750,15 @@ nav.box {
 	transition-duration: 0.5s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	
 
 }
 .ngtsearch-big{
+	background:rgb(241,241,241);
 	width: 250px;
 	top: 2%;
 	border-width:2px;	
-	background-color: transparent;
+	
 
 }
 
@@ -774,9 +791,7 @@ nav.box {
 	background-color: rgba(255,255,255,0.3);
 	-webkit-transform: translate3d(0,3em,0);
 	transform: translate3d(0,3em,0);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	transition: all 0.2s;
+	
 }
 .ngtsearch.open .ngtsearch-form:hover,
 .ngtsearch.open .ngtsearch-form:focus,
@@ -800,7 +815,7 @@ nav.box {
 }
 
 .ngtsearch-input::-ms-clear { /* remove cross in IE */
-	border-width:0px;
+	
     display: none;
 }
 
