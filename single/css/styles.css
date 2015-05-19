@@ -5414,16 +5414,16 @@ body.st-effect-3.menu-open .st-menu.st-effect-1
 
 .navbar
 {
+    position:fixed;
+    top:0;
+    left: 0;
     background-color:rgba(0,0,0,0.2);
     border-bottom:1px solid rgba(255,255,255,0.1);
     height:60px;
     width:100%;
     z-index:9999;
-    position:fixed;
-    top:0;
-    -webkit-transition:all .3s;
-    -moz-transition:all .3s;
-    transition:all .3s
+    
+   
 }
 
 .navbar-inner
@@ -5514,7 +5514,10 @@ body.st-effect-3.menu-open .st-menu.st-effect-1
 {
     background-color:transparent
 }
-
+#ngts-wrapper{
+    z-index: 999999;
+    position: absolute;
+}
 .ngtsearch
 {
     width:200px;

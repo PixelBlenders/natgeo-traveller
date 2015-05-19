@@ -45,7 +45,7 @@
 				</div>
 			</div>
 		</nav>
-
+<div id="ngts-wrapper">
 <div id="ngtsearch" class="ngtsearch">
 				<form class="ngtsearch-form">
 					<input class="ngtsearch-input" type="search" placeholder="Search..."/>
@@ -128,6 +128,7 @@
 					</div>
 				</div><!-- /ngtsearch-content -->
 				<span class="ngtsearch-close"></span>
+			</div>
 			</div>
 
 		<div id="container" class="container intro-effect-push">
@@ -414,10 +415,17 @@ This, I decided, was my New Year’s Resolution. I would spend more time outside
 		<script src="js/stepsFormComment.js"></script>
 		<script src="js/transition.js"></script>
 		<script src="js/jquery.ketchup.all.min.js"></script>
+		<script src="js/scroll-up-bar.min.js"></script>
+
 
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<script type="text/javascript">
+		$('.navbar').scrollupbar();
+		$('#ngts-wrapper').scrollupbar();
+		</script>
+
 		<script type="text/javascript">
 		// ~~~~~~~ FORM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 		var theForm = document.getElementById( 'theForm' );
