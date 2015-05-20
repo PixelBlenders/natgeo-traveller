@@ -414,7 +414,7 @@ This, I decided, was my New Year’s Resolution. I would spend more time outside
 		<script src="js/stepsFormComment.js"></script>
 		<script src="js/transition.js"></script>
 		<script src="js/jquery.ketchup.all.min.js"></script>
-		<script src="js/jquery.scrollupformenu.js"></script>
+		<script src="js/headroom.js"></script>
 
 
 		<!--[if IE]>
@@ -422,13 +422,11 @@ This, I decided, was my New Year’s Resolution. I would spend more time outside
 		<![endif]-->
 		<script type="text/javascript">
 
-		$(function() {     
-	$('.navbar').scrollUpMenu({
-	waitTime: 75,
-	transitionTime: 100,
-	menuCss: { 'position': 'fixed', 'top': '0'}
-	});
-	});
+		var myElement = document.querySelector('.navbar');
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement);
+// initialise
+headroom.init(); 
 			
 		
 		</script>
