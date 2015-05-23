@@ -1,0 +1,38 @@
+
+@media only screen and (max-width: 760px) {
+	.navbar{
+		display: none;
+	}
+    
+    .photostory_wrapper {
+        position: static;
+        height: auto;
+        overflow: visible;
+        transition: all 300ms
+    }
+    .photostory_wrapper ul.photostory_list {
+        position: static;
+        padding: 10px 0 41px!important
+    }
+    .photostory_list li {
+        display: block;
+        float: none
+    }
+    .photostory_list li .slide_wrapper {
+        margin: 0 10px 10px
+    }
+    .photostory_list li .slide_wrapper img {
+        width: 100%;
+        height: auto
+    }
+    .photostory_panel .btn_next,
+    .photostory_panel .btn_prev {
+        display: none
+    }
+    .show_content .photostory_wrapper {
+        height: 100%;
+        overflow: hidden;
+        position: absolute
+    }
+    
+}
