@@ -1386,8 +1386,8 @@ a.sound:before
 .fullwidth.bottom-links p
 {
     margin:0;
-    font-size:12px;
-    color:rgba(255,255,255,0.5)
+    font-size:1em;
+    color:rgba(255,255,255,1)
 }
 
 .fullwidth.bottom-links > a
@@ -5480,6 +5480,7 @@ body.st-effect-3.menu-open .st-menu.st-effect-1
     width:175px
 }
 
+
 .navbar-nav
 {
     float:right;
@@ -6992,4 +6993,9 @@ input[type="search"]
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     transform: translateY(-100%);
+}
+.subtxt{
+    margin-top: -20px;
+    font-size: 0.7em;
+    font-style: italic;
 }
