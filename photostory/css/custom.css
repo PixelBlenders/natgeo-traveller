@@ -784,3 +784,42 @@ input[type="search"] { /* reset normalize */
 	-webkit-transform: translateX(-50%) rotate(-45deg);
 	transform: translateX(-50%) rotate(-45deg);
 }
+
+
+.show_content .close_controls.show_me_always:before,
+.show_content .close_controls:before {
+    opacity: .5
+}
+
+.photost-content {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    display: block;
+    left: 0;
+    top: 100%;
+    z-index: 33;
+    transition: top 400ms, height 400ms
+}
+.photost-content .contnt_block {
+    width: 100%;
+    display: block;
+    background: #fff;
+    z-index: 15;
+    padding: 122px 0 40px
+}
+.photost-content .contnt_block .container {
+    text-align: left
+}
+.show_content .photost-content {
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    height: 100%
+}
+.content_wrapper {
+    position: relative;
+    height: 900px;
+}
+
