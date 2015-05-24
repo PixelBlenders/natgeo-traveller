@@ -5506,12 +5506,12 @@ body.st-effect-3.menu-open .st-menu.st-effect-1
     -moz-transition:all .2s;
     transition:all .2s;
     background-color:transparent;
-    color:#FFCD00
+    color:#FFCD00;
 }
 
 .navbar-nav>li.active>a
 {
-    color:#FFCD00
+    color:#FFCD00;
 }
 
 .navbar-nav>li.open>a,.navbar-nav>li.open>a:focus,.navbar-nav>li.open>a:hover
