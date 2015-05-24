@@ -699,7 +699,7 @@ input[type="search"] { /* reset normalize */
 .color-3 { background: #cc6055; }
 
 .nav-circlepop a {
-	margin: 0 30px;
+	margin: 300px;
 	width: 81px;
 	height: 81px;
 }
@@ -721,11 +721,13 @@ input[type="search"] { /* reset normalize */
 }
 
 .nav-circlepop .icon-wrap {
-	position: relative;
-	display: block;
-	margin: 10% 0 0 10%;
-	width: 80%;
-	height: 80%;
+	position: fixed;
+	
+	margin-top: 300px;
+	width: 10%;
+	height: 10%;
+	z-index: 9999;
+
 }
 
 .nav-circlepop a.next .icon-wrap {
