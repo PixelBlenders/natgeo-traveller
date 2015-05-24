@@ -334,6 +334,7 @@ color: #000!important;
 }
 
 .animated {
+	
  -webkit-transition: all 0.7s ease-out;
 		-moz-transition: all 0.7s ease-out;
 		-o-transition: all 0.7s ease-out;
