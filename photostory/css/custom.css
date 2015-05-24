@@ -730,7 +730,7 @@ input[type="search"] { /* reset normalize */
 
 }
 
-.nav-circlepop a.next .icon-wrap {
+.nav-circlepop a.nextbt .icon-wrap {
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
@@ -820,6 +820,1093 @@ input[type="search"] { /* reset normalize */
 }
 .content_wrapper {
     position: relative;
-    height: 900px;
+    height: 1400px;
+}
+/*comments */
+
+.one_third
+{
+    float:left;
+    width:33.33%
 }
 
+.one_sixth
+{
+    float:left;
+    width:16.66%
+}
+
+.sixth_one
+{
+    float:left;
+    width:83.34%
+}
+
+.two_third
+{
+    float:left;
+    width:66.66%
+}
+
+.one_half
+{
+    float:left;
+    width:50%
+}
+
+.one_ninth
+{
+    width:10%;
+    float:left
+}
+
+.two_eight
+{
+    width:20%;
+    float:left
+}
+
+.ninth_one
+{
+    width:90%;
+    float:left
+}
+
+.eight_two
+{
+    width:80%;
+    float:left
+}
+
+.boxed
+{
+    margin:0 auto;
+    max-width:900px;
+    padding:0 20px
+}
+
+.container
+{
+    height:100%
+}
+
+.fullwidth
+{
+    float:left;
+    width:100%;
+    padding:20px
+}
+
+.divider
+{
+    width:100%;
+    clear:both;
+    display:block;
+    height:15px
+}
+.float-right
+{
+    float:right
+}
+.divider_10
+{
+    width:100%;
+    clear:both;
+    display:block;
+    height:20px
+}
+
+.divider_20
+{
+    width:100%;
+    clear:both;
+    display:block;
+    height:20px
+}
+
+.divider_30
+{
+    width:100%;
+    clear:both;
+    display:block;
+    height:30px
+}
+
+.divider_80
+{
+    width:100%;
+    clear:both;
+    display:block;
+    height:80px
+}
+.relative
+{
+    position:relative
+}
+.fullwidth
+{
+    float:left;
+    width:100%;
+    padding:20px
+}
+
+.natgeo_comment_form .focus-me::-webkit-input-placeholder,.natgeo_comment_form .focus-me:-moz-placeholder,.natgeo_comment_form .focus-me::-moz-placeholder,.natgeo_comment_form .focus-me:-ms-input-placeholder
+{
+    color:white
+}
+
+.natgeo_comments .child_comment
+{
+    margin-left:30px
+}
+
+.natgeo_comments .author_name
+{
+    color:rgba(0,0,0,0.7);
+    font-size:15px;
+    line-height:normal;
+    text-align:center;
+    width:87%
+}
+
+.natgeo_comments .child_child_comment
+{
+    margin-left:60px
+}
+
+.natgeo_comments.comments
+{
+    overflow:hidden
+}
+
+.natgeo_comments .comment_author,.natgeo_comments .comment_body
+{
+    color:#111111
+}
+
+.natgeo_comments .comment_author
+{
+    width:100px
+}
+
+.natgeo_comments .single_comment
+{
+    margin-top:20px;
+    padding:0
+}
+
+.natgeo_comments .single_comment:nth-child(2)
+{
+    margin-top:0
+}
+
+.natgeo_comments .comment_date
+{
+    color:#aaaaaa
+}
+
+.natgeo_comments .comment_footer
+{
+    color:#555555
+}
+
+.natgeo_comments .comment_author > img
+{
+    border:2px solid rgba(255,255,255,0.6);
+    max-height:87%;
+    max-width:87%
+}
+
+.natgeo_comments .sixth_one.comment_body
+{
+    border:2px solid rgba(255,255,255,0.6);
+    padding:15px;
+    width:88%
+}
+
+.natgeo_comments .child_comment .comment_body
+{
+    width:84.5%
+}
+
+.natgeo_comments .comment_body p
+{
+    color:rgba(0,0,0,0.7);
+    font-size:15px;
+    line-height:normal;
+    margin-bottom:0
+}
+
+.natgeo_comments .single_comment:hover .comment_author img,.natgeo_comments .single_comment:hover .comment_body
+{
+    border-color:rgba(255,205,0,.6);
+    transition:all 500ms ease 0;
+    -moz-transition:all 500ms ease 0;
+    -webkit-transition:all 500ms ease 0
+}
+
+.natgeo_comments .single_comment:hover .author_name
+{
+    color:rgba(255,205,0,.6);
+    transition:all 500ms ease 0;
+    -moz-transition:all 500ms ease 0;
+    -webkit-transition:all 500ms ease 0
+}
+
+.comment_body .date
+{
+    opacity:.5
+}
+
+input,textarea
+{
+    border:2px solid #329898;
+    font-size:13px;
+    padding:9px
+}
+
+.natgeo_comment_form textarea
+{
+    margin-top:10px
+}
+
+.natgeo_comment_form .one_half:first-child input
+{
+    width:calc(100% - 10px)
+}
+
+.natgeo_comment_form input,.natgeo_comment_form textarea
+{
+    border:2px solid #329898;
+    font-size:13px;
+    padding:9px;
+    width:100%
+}
+
+.natgeo_comment_form input[type="submit"]
+{
+    margin:30px 0
+}
+
+.reply_button
+{
+    bottom:10px;
+    cursor:pointer;
+    position:absolute;
+    right:10px
+}
+
+.content > div.article-footer > p,.content > div.article-footer > p:first-child
+{
+    color:rgba(0,0,0,0.85);
+    font-size:14px;
+    margin:0
+}
+
+.article-footer h3.black
+{
+    color:rgba(0,0,0,0.5)
+}
+
+.index-single .single-item-effect.half:nth-child(1) h2,.index-single .single-item-effect.half:nth-child(1) p
+{
+    margin-left:10px!important
+}
+
+.index-single .single-item-effect.half:nth-child(2) h2,.index-single .single-item-effect.half:nth-child(2) p
+{
+    margin-right:10px!important
+}
+
+.index-contact .bg-img
+{
+    z-index:200
+}
+
+.index-contact.p404 .title
+{
+    z-index:201
+}
+
+.index-contact .title
+{
+    z-index:1
+}
+
+.simform
+{
+    position:relative;
+    margin:0 auto;
+    max-width:860px;
+    width:100%;
+    text-align:left;
+    font-size:40px
+}
+
+.simform .submit
+{
+    display:none
+}
+
+.simform ol
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:relative;
+    -webkit-transition:height .4s;
+    transition:height .4s
+}
+
+.simform ol:before
+{
+    content:'';
+    background-color:rgba(255,205,0,0.5);
+    position:absolute;
+    left:0;
+    top:60px;
+    width:100%;
+    height:65px;
+    -webkit-transition:height .5s ease-in-out;
+    transition:height .5s ease-in-out
+}
+
+.index-single .simform ol:before
+{
+    content:'';
+    background-color:rgba(255,205,0,0.5);
+    position:absolute;
+    left:0;
+    top:51px;
+    width:100%;
+    height:101px;
+    -webkit-transition:height .5s ease-in-out;
+    transition:height .5s ease-in-out
+}
+
+.index-single .simform ol.change:before
+{
+    height:58px
+}
+
+.questions li
+{
+    z-index:100;
+    position:relative;
+    visibility:hidden;
+    height:0;
+    -webkit-transition:visibility 0 0.4s,height 0 .4s;
+    transition:visibility 0 0.4s,height 0 .4s
+}
+
+.questions li.current,.no-js .questions li
+{
+    visibility:visible;
+    height:auto;
+    -webkit-transition:none;
+    transition:none
+}
+
+.questions li > span
+{
+    display:block;
+    overflow:hidden
+}
+
+.questions li > span label
+{
+    color:rgba(255,255,255,0.8);
+    display:block;
+    line-height:50px;
+    -webkit-transition:-webkit-transform .4s;
+    transition:transform .4s;
+    -webkit-transform:translateY(-100%);
+    transform:translateY(-100%);
+    color:rgba(0,0,0,0.6);
+    font-size:20px;
+    font-weight:500
+}
+
+.index-contact .questions li > span label
+{
+    font-size:25px;
+    color:rgba(255,255,255,0.8)
+}
+
+.questions li.current > span label,.no-js .questions li > span label
+{
+    -webkit-transition:none;
+    transition:none;
+    -webkit-transform:translateY(0);
+    transform:translateY(0)
+}
+
+.show-next .questions li.current > span label
+{
+    -webkit-animation:moveUpFromDown .4s both;
+    animation:moveUpFromDown .4s both
+}
+
+@-webkit-keyframes moveUpFromDown {
+    from
+    {
+        -webkit-transform:translateY(100%)
+    }
+    
+    to
+    {
+        -webkit-transform:translateY(0)
+    }
+}
+
+@keyframes moveUpFromDown {
+    from
+    {
+        -webkit-transform:translateY(100%);
+        transform:translateY(100%)
+    }
+    
+    to
+    {
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+}
+
+.natgeo_comment_form .questions input.focus-me,.natgeo_comment_form .questions textarea.focus-me
+{
+    font-size:19px;
+    padding:15px
+}
+
+.questions .focus-me
+{
+    display:block;
+    margin:0;
+    padding:10px;
+    width:calc(100% - 32px);
+    border:none;
+    background:transparent;
+    font-size:40px;
+    opacity:0
+}
+
+.questions textarea.focus-me
+{
+    resize:none
+}
+
+.questions textarea.focus-me:focus,.questions textarea.focus-me:active,.questions textarea.focus-me:hover
+{
+    border:0 none;
+    outline:0
+}
+
+.show-textarea .simform-inner .questions:before
+{
+    height:160px
+}
+
+.index-single .show-textarea .simform-inner .questions:before
+{
+    height:148px
+}
+
+.questions .current .focus-me,.no-js .questions .focus-me
+{
+    opacity:1
+}
+
+.natgeo_comment_form .questions .current .focus-me,.natgeo_comment_form .no-js .questions .focus-me
+{
+    color:white
+}
+
+.natgeo_comment_form .error-message.show,.natgeo_comment_form .final-message.show
+{
+    color:#000000;
+    opacity:.6
+}
+
+.questions input:focus,.simform button:focus
+{
+    outline:none
+}
+
+.simform-inner
+{
+    position:relative
+}
+
+.next
+{
+    position:absolute;
+    right:0;
+    bottom:34px;
+    display:block;
+    padding:0;
+    width:32px;
+    height:100%;
+    border:none;
+    background:none;
+    color:rgba(0,0,0,0.4);
+    text-align:center;
+    opacity:0;
+    z-index:100;
+    cursor:pointer;
+    top:0;
+    -webkit-transition:-webkit-transform 0.3s,opacity .3s;
+    transition:transform 0.3s,opacity .3s;
+    -webkit-transform:translateX(-20%);
+    transform:translateX(-20%);
+    pointer-events:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+.next:hover
+{
+    color:rgba(0,0,0,0.5)
+}
+
+.index-single .next::after
+{
+    line-height:66px
+}
+
+.next::after
+{
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:auto;
+    content:"\f105";
+    font-size: 3em;
+    text-transform:none;
+    font-weight:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-family:'FontAwesome';
+    line-height:2;
+    speak:none;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    margin-top:-10px
+}
+
+#natgeo-search-404 input[type="submit"]
+{
+    background:none repeat scroll 0 0 transparent;
+    border:medium none;
+    display:block;
+    font-family:FontAwesome;
+    font-size:15px;
+    opacity:1
+}
+
+.next.show
+{
+    opacity:1;
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+    pointer-events:auto
+}
+
+.simform .progress
+{
+    width:0;
+    height:2px;
+    background:#000;
+    -webkit-transition:width .4s ease-in-out;
+    transition:width .4s ease-in-out
+}
+
+.simform .progress::before
+{
+    position:absolute;
+    top:auto;
+    width:100%;
+    height:inherit;
+    background:rgba(0,0,0,0.5);
+    content:''
+}
+
+.simform .number
+{
+    position:absolute;
+    right:0;
+    overflow:hidden;
+    margin:6px 0;
+    width:48px;
+    font-weight:700;
+    font-size:16px
+}
+
+.natgeo_comment_form .simform .number:after,.natgeo_comment_form .simform .number .number-current,.natgeo_comment_form .simform .number span
+{
+    color:#000000;
+    opacity:.6
+}
+
+.simform .number:after
+{
+    position:absolute;
+    left:50%;
+    content:'/';
+    color:rgba(255,255,255,1);
+    opacity:.4;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%)
+}
+
+.simform .number span
+{
+    float:right;
+    width:40%;
+    text-align:center;
+    color:rgba(255,255,255,0.8)
+}
+
+.simform .number .number-current
+{
+    color:rgba(255,255,255,0.8);
+    float:left
+}
+
+.simform .number-next
+{
+    position:absolute;
+    color:rgba(255,255,255,0.8);
+    left:0
+}
+
+.simform.show-next .number-current
+{
+    -webkit-transition:-webkit-transform .4s;
+    transition:transform .4s;
+    -webkit-transform:translateY(-100%);
+    transform:translateY(-100%)
+}
+
+.simform.show-next .number-next
+{
+    -webkit-animation:moveUpFromDown .4s both;
+    animation:moveUpFromDown .4s both
+}
+
+.simform .error-message,.simform .final-message
+{
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:opacity .4s;
+    transition:opacity .4s
+}
+
+.simform .error-message
+{
+    padding:6px 56px 0 0;
+    width:100%;
+    color:rgba(0,0,0,0.7);
+    font-style:italic;
+    font-size:18px
+}
+
+.natgeo_comment_form .final-message
+{
+    font-size:22px;
+    text-align:left;
+    padding:0;
+    text-align:left
+}
+
+.final-message
+{
+    top:50%;
+    left:0;
+    padding:8px;
+    width:100%;
+    text-align:center;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%)
+}
+
+.error-message.show,.final-message.show
+{
+    color:#ffffff;
+    opacity:.7;
+    visibility:visible
+}
+
+.final-message.show
+{
+    color:rgba(255,255,255,0.8);
+    -webkit-transition-delay:.5s;
+    transition-delay:.5s
+}
+
+.simform-inner.hide
+{
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:opacity 0.3s,visibility 0 .3s;
+    transition:opacity 0.3s,visibility 0 .3s
+}
+
+.no-js .simform
+{
+    font-size:28px
+}
+
+.no-js .questions li
+{
+    padding:0 0 32px
+}
+
+.no-js .simform .submit
+{
+    display:block;
+    float:right;
+    padding:10px 20px;
+    border:none;
+    background:rgba(0,0,0,0.3);
+    color:rgba(0,0,0,0.4)
+}
+
+.no-js .simform .controls
+{
+    display:none
+}
+
+.yellow
+{
+    color:#FFCD00
+}
+.black
+{
+    color:rgba(0,0,0,0.7)
+}
+.container-comments{
+	padding-left: 10%;
+	padding-right: 10%;
+
+}
+
+/*photostack*/
+
+.photostack {
+	width: 100%;
+	background: #fff;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.js .photostack {
+	height: 580px;
+}
+
+.photostack-start {
+	cursor: pointer;
+}
+
+/* Wrapper and figures */
+
+/* The size of this wrapper can be smaller if the items should not be scattered across the whole container */ 
+.photostack > div {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.photostack figure {
+	width: 275px;
+	height: 325px;
+	position: relative;
+	display: inline-block;
+	background: #FFCD00;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-align: center;
+	margin: 5px;
+}
+
+.js .photostack figure {
+	position: absolute;
+	display: block;
+	margin: 0;
+}
+
+.photostack figcaption h2 {
+	margin: 20px 0 0 0;
+	color: #fff;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.photostack-img {
+	outline: none;
+	display: block;
+	width: 240px;
+	height: 240px;
+	background: #f9f9f9;
+}
+
+.photostack-back {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #f1f1f1;
+	font-family:"Roboto";
+	color: #000;
+	padding: 50px 40px;
+	text-align: left;
+	font-size: 1.4em;
+	font-weight: 300;
+	line-height: 1.25;
+	z-index: 1;
+}
+
+.photostack-back p {
+	margin-top: -10px;
+	font-size: 1.4em;
+	font-weight: 300;
+	
+}
+
+
+
+/* Navigation dots */
+.photostack nav {
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+	z-index: 90;
+	text-align: center;
+	left: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.photostack-start nav {
+	opacity: 0;
+}
+ 
+.photostack nav span {
+	position: relative;
+	display: inline-block;
+	margin: 0 5px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: #aaa;
+	border-radius: 50%;
+	text-align: center;
+	-webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
+	transition: transform 0.6s ease-in-out, background 0.3s;
+	-webkit-transform: scale(0.48);
+	transform: scale(0.48);
+}
+
+.photostack nav span:last-child {
+	margin-right: 0;
+}
+
+.photostack nav span::after {
+	content: "\f103";
+	 font-family:'FontAwesome';
+	font-size: 200%;
+	speak: none;
+	display: inline-block;
+	vertical-align: top;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 30px;
+	color: #fff;
+	opacity: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+}
+.photostack nav span:hover::after {
+	content: "\f102";
+	-webkit-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	
+}
+
+
+.photostack nav span.current {
+	background: #FFCD00;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.photostack nav span.current.flip {
+	content: "\f102";
+	-webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
+	transform: scale(1) rotateY(-180deg) translateZ(-1px);
+	background: #555;
+}
+.photostack nav span.current.flip:hover {
+	content: "\f103";
+	
+}
+
+.photostack nav span.flippable::after {
+	opacity: 1;
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+/* Overlays */
+
+/* Initial overlay on photostack container */
+.js .photostack::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	top: 0;
+	left: 0;
+	z-index: 100;
+	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+	transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.js .photostack-start::before {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+/* Button on photostack container */
+.js .photostack::after {
+	content: 'View Gallery';
+	font-weight: 400;
+	position: absolute;
+	border: 3px solid #fff;
+	text-align: center;
+	white-space: nowrap;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+	padding: 10px 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	z-index: 101;
+}
+
+.js .photostack::before,
+.js .photostack::after {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.js .photostack-start::before,
+.js .photostack-start:hover::after,
+.touch .photostack-start::after  {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Overlay on figure */
+.photostack figure::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	opacity: 1;
+	background: rgba(0,0,0,0.05);
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+/* Hide figure overlay when it becomes current */
+figure.photostack-current::after {
+	-webkit-transition: opacity 0.6s, visibility 0s 0.6s;
+	transition: opacity 0.6s, visibility 0s 0.6s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* Special classes for transitions and perspective */
+.photostack-transition figure {
+	-webkit-transition: -webkit-transform 0.6s ease-in-out;
+	transition: transform 0.6s ease-in-out;
+}
+
+.photostack-perspective {
+	-webkit-perspective: 1800px;
+	perspective: 1800px;
+}
+
+.photostack-perspective > div,
+.photostack-perspective figure {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.photostack-perspective figure,
+.photostack-perspective figure div {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.photostack-perspective figure.photostack-flip {
+	-webkit-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+
+.csstransformspreserve3d figure.photostack-flip .photostack-back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	display: block;
+}
+
+.no-csstransformspreserve3d figure.photostack-showback .photostack-back {
+	display: block;
+}
+
+/* The no-JS fallback look does not need to be boring ;) */
+.no-js .photostack figure {
+	box-shadow: -2px 2px 0 rgba(0,0,0,0.05);
+}
+
+.no-js .photostack figure::after {
+	display: none;
+}
+
+.no-js .photostack figure:nth-child(3n) {
+	-webkit-transform: translateX(-10%) rotate(5deg);
+	transform: translateX(-10%) rotate(5deg);
+}
+
+.no-js .photostack figure:nth-child(3n-2) {
+	-webkit-transform: translateY(10%) rotate(-3deg);
+	transform: translateY(10%) rotate(-3deg);
+}
+
+/* Some custom styles for the demo */
+
+/* Since we don't have back sides for the first photo stack, we don't want the current dot to become too big */
+#photostack-1 nav span.current {
+	background: #888;
+	-webkit-transform: scale(0.61);
+	transform: scale(0.61);
+}
