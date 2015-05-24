@@ -231,8 +231,11 @@ img{
  transition:500ms filter linear;
 -webkit-transition:500ms -webkit-filter linear;
 -moz-transition:500ms -moz-filter linear;
+-moz-transition:500ms filter linear;
 -ms-transition:500ms -ms-filter linear;
+-ms-transition:500ms filter linear;
 -o-transition: 500ms -o-filter linear;
+-o-transition: 500ms filter linear;
 }
 .not-current img{
  
