@@ -154,47 +154,47 @@
                                                                     <img src="img/photostory/1.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="2" data-title=" To me, Kolkata is a city in motion. Photo: Ayan Mukherjee" class="slide2">
+                                                            <li data-count="2" data-title=" To me, Kolkata is a city in motion. Photo: Ayan Mukherjee" class="slide2 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/2.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="3" data-title=" Be it Dahi Handi or Ganpati Visarjan, Mumbaikars celebrate with great spirit and enthusiasm. Photo: Abhinav Singh " class="slide3">
+                                                            <li data-count="3" data-title=" Be it Dahi Handi or Ganpati Visarjan, Mumbaikars celebrate with great spirit and enthusiasm. Photo: Abhinav Singh " class="slide3 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/3.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="4" data-title=" Mumbai, a city that never sleeps, with a pulsating nightlife. A city that hosts people from all walks of like and one that is believed to make dreams come true." class="slide4">
+                                                            <li data-count="4" data-title=" Mumbai, a city that never sleeps, with a pulsating nightlife. A city that hosts people from all walks of like and one that is believed to make dreams come true." class="slide4 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/4.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="5" data-title="Though Howrah Bridge links Kolkata to Howrah, it has come to be recognised as a famous symbol of the former. Photo: Sandipa Malakar" class="slide5">
+                                                            <li data-count="5" data-title="Though Howrah Bridge links Kolkata to Howrah, it has come to be recognised as a famous symbol of the former. Photo: Sandipa Malakar" class="slide5 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/5.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="6" data-title="  A place where you live by the rules of the wild. Photo: Gayatri" class="slide6">
+                                                            <li data-count="6" data-title="  A place where you live by the rules of the wild. Photo: Gayatri" class="slide6 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/6.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="7" data-title="  Ganga aarti at Bagbazar Ghat, Kolkata. Photo: Satyam Roy Chowdhury" class="slide7">
+                                                            <li data-count="7" data-title="  Ganga aarti at Bagbazar Ghat, Kolkata. Photo: Satyam Roy Chowdhury" class="slide7 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/7.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="8" data-title=" A local chaiwala at a busy roadside stall near Chota Imambara in Lucknow. Photo: Puranjit Gangopadhyay " class="slide8">
+                                                            <li data-count="8" data-title=" A local chaiwala at a busy roadside stall near Chota Imambara in Lucknow. Photo: Puranjit Gangopadhyay " class="slide8 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/8.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="9" data-title="In the heart of Kolkata, the City of Joy, lies the majestic Victoria Memorial." class="slide9">
+                                                            <li data-count="9" data-title="In the heart of Kolkata, the City of Joy, lies the majestic Victoria Memorial." class="slide9 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/9.jpg" alt=""/>
                                                                 </div>
                                                             </li>
-                                                            <li data-count="10" data-title=" Bangalore: A cityscape. Photo: Udit Jain" class="slide10">
+                                                            <li data-count="10" data-title=" Bangalore: A cityscape. Photo: Udit Jain" class="slide10 not-current">
                                                                 <div class="slide_wrapper">
                                                                     <img src="img/photostory/10.jpg" alt=""/>
                                                                 </div>
@@ -256,14 +256,14 @@ function prev_slide() {
     "use strict";
     var e = -1 * (jQuery(".photostory_list").width() - window_w),
         t = parseInt(jQuery(".currentStep").attr("data-count"), 10);
-    t--, 1 > t && (t = jQuery(".photostory_list").find("li").size()), jQuery(".currentStep").removeClass("currentStep"), jQuery(".num_current").text(t), jQuery(".slide" + t).addClass("currentStep"), jQuery(".slider_caption").text(jQuery(".currentStep").attr("data-title")), -1 * jQuery(".slide" + t).attr("data-offset") > e ? jQuery(".photostory_list").css("left", -1 * jQuery(".slide" + t).attr("data-offset")) : jQuery(".photostory_list").css("left", e), jQuery(".slide_title").text(jQuery(".currentStep").attr("data-title"))
+    t--, 1 > t && (t = jQuery(".photostory_list").find("li").size()), jQuery(".currentStep").removeClass("currentStep").addClass("not-current"), jQuery(".num_current").text(t), jQuery(".slide" + t).removeClass("not-current").addClass("currentStep"), jQuery(".slider_caption").text(jQuery(".currentStep").attr("data-title")), -1 * jQuery(".slide" + t).attr("data-offset") > e ? jQuery(".photostory_list").css("left", -1 * jQuery(".slide" + t).attr("data-offset")) : jQuery(".photostory_list").css("left", e), jQuery(".slide_title").text(jQuery(".currentStep").attr("data-title"))
 }
 
 function next_slide() {
     "use strict";
     var e = -1 * (jQuery(".photostory_list").width() - window_w),
         t = parseInt(jQuery(".currentStep").attr("data-count"), 10);
-    t++, t > jQuery(".photostory_list").find("li").size() && (t = 1), jQuery(".currentStep").removeClass("currentStep"), jQuery(".num_current").text(t), jQuery(".slide" + t).addClass("currentStep"), -1 * jQuery(".slide" + t).attr("data-offset") > e ? jQuery(".photostory_list").css("left", -1 * jQuery(".slide" + t).attr("data-offset")) : jQuery(".photostory_list").css("left", e), jQuery(".slide_title").text(jQuery(".currentStep").attr("data-title"))
+    t++, t > jQuery(".photostory_list").find("li").size() && (t = 1), jQuery(".currentStep").removeClass("currentStep").addClass("not-current"), jQuery(".num_current").text(t), jQuery(".slide" + t).removeClass("not-current").addClass("currentStep"), -1 * jQuery(".slide" + t).attr("data-offset") > e ? jQuery(".photostory_list").css("left", -1 * jQuery(".slide" + t).attr("data-offset")) : jQuery(".photostory_list").css("left", e), jQuery(".slide_title").text(jQuery(".currentStep").attr("data-title"))
 }
 jQuery(document).ready(function() {
     "use strict";

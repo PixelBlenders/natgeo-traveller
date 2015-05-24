@@ -219,10 +219,31 @@ span_title
 
 .photostory_wrapper .fw_gallery_list li img
 {
+
   width:auto;
   height:100%;
   display:block;
   margin:0 auto;
+
+}
+img{
+   
+ transition:500ms filter linear;
+-webkit-transition:500ms -webkit-filter linear;
+-moz-transition:500ms -moz-filter linear;
+-ms-transition:500ms -ms-filter linear;
+-o-transition: 500ms -o-filter linear;
+}
+.not-current img{
+ 
+
+ -webkit-filter: brightness(0.5);
+       -moz-filter: brightness(0.5);
+         -o-filter: brightness(0.5);
+        -ms-filter: brightness(0.5);
+            filter: brightness(0.5);
+
+            
 }
 
 .photostory_wrapper .fw_video_block
