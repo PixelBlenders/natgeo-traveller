@@ -140,39 +140,10 @@ h3{
 	
 	}
 
-#d_loading {
-	position: absolute;
-	width: 32px;
-	height: 32px;
-	left: 0px;
-	top: 0px;
-	z-index: 3;
-	background: url("../images/loading.gif") no-repeat center center;
-}
 
-#mycanvas {
-	width: 100%;
-	margin-top: -100px;
-	/*
-	position: fixed!important;
-	position: absolute;*/
-	
-	
-	z-index: 2;
-	
-	-webkit-transform-origin: 0px 0px;
-	-moz-transform-origin: 0px 0px;
-	-o-transform-origin: 0px 0px;
-	-webkit-filter: contrast(120%);
-	-moz-filter: contrast(120%);
-	-o-filter: contrast(120%);
-	filter: contrast(120%);
-
-	
-	/* -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
-	-moz-transform: translate(0px 0px) scale(1);
-	-o-transform:translate(0px 0px) scale(1);
-	 */
+#hero{
+	background: no-repeat center center;
+	background-size:cover;
 }
 @-webkit-keyframes moveDown {
     0% {
@@ -316,7 +287,7 @@ h3{
     -moz-transform: translate3d(0, 140%, 0);
       -ms-transform: translate3d(0, 140%, 0);
           transform: translate3d(0, 140%, 0);
-          
+          margin-top: -200px;
 }
 .animated.moveUp {
    -webkit-transform: translate3d(0, 0, 0);
@@ -1114,6 +1085,10 @@ input[type="search"] { /* reset normalize */
 		top: 10%;
 		right: 10%;
 	}
+}
+.box a:hover{
+	color: #000;
+
 }
 
 

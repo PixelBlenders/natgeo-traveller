@@ -595,7 +595,8 @@ input[type="search"] { /* reset normalize */
 /* Content styles */
 .md-content {
 	color: #fff;
-	background: #f1f1f1;
+	background: rgba(255,255,255,0.8);
+
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
