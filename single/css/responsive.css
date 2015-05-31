@@ -558,12 +558,7 @@
     }
 }
 
-@media only screen and (min-width: 1367px) {
-    .modify .header
-    {
-        height:60%
-    }
-}
+
 
 @media only screen and (min-width: 768px) and (min-width: 1023px) {
     .index-category .intro-effect-sidefixed.modify .title h1
